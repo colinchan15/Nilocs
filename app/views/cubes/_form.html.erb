@@ -1,131 +1,21 @@
 
-<%#= simple_form_for(@cube) do |f| %>
-  <%#= f.error_notification %>
-  <%#= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+<%= simple_form_for(@cube) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-  <!-- <div class="form-inputs"> -->
-    <%#= f.input :brand %>
-    <%#= f.input :model %>
-    <%#= f.input :description %>
-    <%#= f.input :condition %>
-    <%#= f.input :finish %>
-    <%#= f.input :title %>
-    <%#= f.input :price %>
-  <!-- </div> -->
-
-  <!-- <div class="form-actions"> -->
-    <%#= f.button :submit %>
-  <!-- </div> -->
-<%# end %> 
-
-<div class="columns">
-  <div class="column is-8 is-centered">
-
-    <%= simple_form_for @cube, html: { multipart: true } do |f| %> <!-- passing through the instrument field which is coming from controller so actions are actually on create, edit, etc. 
-    Also, have to add multipart since using file formats-->
-      <%= f.error_notification %>
-
-        <div class="columns">
-
-          <div class="field column is-9">
-            <div class="control">
-              <%= f.input :title , required: true, input_html: { class: "input"}, wrapper: false, label_html: { class:"label" } %>
-              <!-- bulma framwork requires that class name is passed in -->
-            </div>
-          </div>
-
-          <div class="field column">
-            <div class="control">
-              <%= f.input :price, required: true, input_html: { class:"input", maxlength: 7  }, wrapper: false, label_html: { class:"label" } %>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="field">
-          <div class="control">
-            <%= f.input :model, required: true, input_html: { class:"input" }, wrapper: false, label_html: { class:"label" } %>
-          </div>
-        </div>
-
-        <div class="field">
-          <div class="control">
-            <%= f.input :description, required: true, input_html: { class:"textarea" }, wrapper: false, label_html: { class:"label" } %>
-          </div>
-        </div>
-
-        <div class="columns">
-          <div class="field column is-4">
-            <div class="control">
-              <label class="label">Brand</label>
-              <div class="control has-icons-left">
-                <span class="select">
-                  <!-- drop downs -->
-                  <!-- passing in an input field instead of input, which is a stripped away form of input field-->
-                  <!-- passes in column, and then collection of that specified constant -->
-                  <!-- Must access model itself, in this case "cube" and then the name given to it in all caps -->
-                  <%= f.input_field :brand, collection: Cube::BRAND, prompt: "Select brand" %>
-                </span>
-                <span class="icon is-small is-left">
-                  <i class="fa fa-tag"></i>
-                </span>
-              </div>
-            </div>
-           </div>
-
-          <div class="field column is-4">
-            <div class="control">
-              <label class="label">Finish</label>
-              <div class="control has-icons-left">
-                <span class="select">
-                  <%= f.input_field :finish, collection: Cube::FINISH, prompt: "Select finish" %>
-                </span>
-                <span class="icon is-small is-left">
-                  <i class="fa fa-paint-brush"></i>
-                </span>
-              </div>
-            </div>
-           </div>
-
-          <div class="field column is-4">
-            <div class="control">
-              <label class="label">Condition</label>
-              <div class="control has-icons-left">
-                <span class="select">
-                  <%= f.input_field :condition, collection: Cube::CONDITION, prompt: "Select condition" %>
-                </span>
-                <span class="icon is-small is-left">
-                  <i class="fa fa-paint-brush"></i>
-                </span>
-              </div>
-            </div>
-           </div>
-         </div>
-
-        <div class="field">
-          <div class="control">
-            <label class="label">Add images</label>
-              <div class="file">
-              <label class="file-label">
-                <%= f.input :image, as: :file, input_html: { class:"file-input cube-image" }, label: false, wrapper: false %>
-                  <span class="file-cta">
-                    <span class="file-icon"><i class="fa fa-upload"></i></span>
-                    <span class="file-label">Choose a file…</span>
-                  </span>
-              </label>
-              </div>
-            </div>
-          </div>
-          <output id="list"></output>
-        <hr />
-
-        <div class="field is-grouped">
-          <div class="control">
-            <%= f.button :submit, class: 'button is-warning' %>
-            <%= link_to 'Cancel', cubes_path, class:'button is-light' %>
-          </div>
-        </div>
-
-      <% end %>
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <%= f.input :brand %>
+    <%= f.input :model %>
+    <%= f.input :description %>
+    <%= f.input :condition %>
+    <%= f.input :finish %>
+    <%= f.input :price %>
+    <%= f.input :image%>
   </div>
-</div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %> 
+

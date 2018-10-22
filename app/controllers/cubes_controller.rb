@@ -5,8 +5,8 @@ class CubesController < ApplicationController
   # GET /cubes
   # GET /cubes.json
   def index
-    # @cubes = Cube.all
-    @cubes = Cube.all.order("created_at desc")
+    @cubes = Cube.all
+    # @cubes = Cube.all.order("created_at desc")
   end
 
   # GET /cubes/1
@@ -16,8 +16,8 @@ class CubesController < ApplicationController
 
   # GET /cubes/new
   def new
-    # @cube = Cube.new
-    @cube = current_user.cubes.build
+    @cube = Cube.new
+    # @cube = current_user.cubes.build
   end
 
   # GET /cubes/1/edit

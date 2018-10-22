@@ -1,3 +1,31 @@
 // Place all the styles related to the Cubes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+table
+{
+    width: 1200px;
+    table-layout: fixed;
+
+}
+
+td:empty { display: none; }
+
+table tr th:nth-child(1){
+       width: 15%;
+     }
+
+table tr th:nth-child(4){
+       width: 30%;
+     }
+
+table tr th:nth-child(6){
+       width: 10%;
+     }
+
+table td{ height: 75px };
+
+.center {
+     width: 30%;
+     margin: 0 auto;
+}
