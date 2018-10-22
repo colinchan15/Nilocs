@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @cube.brand %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @cube.model %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @cube.description %>
+</p>
+
+<p>
+  <strong>Condition:</strong>
+  <%= @cube.condition %>
+</p>
+
+<p>
+  <strong>Finish:</strong>
+  <%= @cube.finish %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @cube.title %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @cube.price %>
+</p>
+
+<%= link_to 'Edit', edit_cube_path(@cube) %> |
+<%= link_to 'Back', cubes_path %>

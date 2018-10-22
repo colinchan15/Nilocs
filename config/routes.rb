@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :cubes
   devise_for :views
   devise_for :users, controllers: {
   	registrations: 'registrations'
