@@ -41,6 +41,14 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
+# self-added gems here
+gem 'bulma-rails', '~> 0.6.1'
+gem 'simple_form', '~> 3.5'
+gem 'devise', '~> 4.4'
+gem 'gravatar_image_tag', '~> 1.2'
+gem 'carrierwave'
+gem 'mini_magick'
+
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
