@@ -266,7 +266,7 @@ DEPENDENCIES
   bulma-rails (~> 0.6.1)
   byebug
   capybara (>= 2.15)
-  carrierwave
+  carrierwave (~> 1.0)
   chromedriver-helper
   coffee-rails (~> 4.2)
   devise

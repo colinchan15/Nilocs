@@ -46,8 +46,8 @@ gem 'bulma-rails', '~> 0.6.1'
 gem 'simple_form' # generates simpler forms outside typical rails forms
 gem 'devise' # user authentication
 gem 'gravatar_image_tag', '~> 1.2' # 
-gem 'carrierwave' # image upload service
 gem 'mini_magick' # cw requires this gem 
+gem 'carrierwave', '~> 1.0' # image upload service
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
