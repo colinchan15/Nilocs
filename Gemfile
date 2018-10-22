@@ -42,12 +42,12 @@ group :development, :test do
 end
 
 # self-added gems here
-gem 'bulma-rails', '~> 0.6.1'
-gem 'simple_form', '~> 3.5'
-gem 'devise', '~> 4.4'
-gem 'gravatar_image_tag', '~> 1.2'
-gem 'carrierwave'
-gem 'mini_magick'
+gem 'bulma-rails', '~> 0.6.1' 
+gem 'simple_form' # generates simpler forms outside typical rails forms
+gem 'devise' # user authentication
+gem 'gravatar_image_tag', '~> 1.2' # 
+gem 'carrierwave' # image upload service
+gem 'mini_magick' # cw requires this gem 
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
@@ -66,6 +66,11 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+
+  # front end workflow helpers 
+  gem 'better_errors', '~> 2.4'
+  gem 'guard', '~> 2.14', '>= 2.14.1' # task runner
+  gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
