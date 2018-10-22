@@ -1,6 +1,7 @@
 class Cube < ApplicationRecord
 	
 	belongs_to :user, optional: true
+	has_many :line_items
 
 	mount_uploader :image, AvatarUploader # for carrierwave
 	serialize :image, JSON # ONLY FOR SQLITE

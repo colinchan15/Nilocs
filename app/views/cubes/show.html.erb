@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+ <!-- <p> -->
+  <!-- <strong>Sold By: <%#= @cube.user.name %></strong> -->
+<!-- </p>   -->
+
 <p>
   <strong>Title:</strong>
   <%= @cube.title %>
@@ -42,9 +46,9 @@
 
 <%= link_to 'Edit', edit_cube_path(@cube) %> |
 <%= link_to 'Back', cubes_path %>
-
 <div class="center">
 <%= button_to 'Add to cart', '#', class: 'button is-warning add-to-cart' %>
 </div>
+
 
 <br>

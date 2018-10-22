@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :line_items
+  resources :carts
   resources :cubes
   devise_for :views
   devise_for :users, controllers: {
