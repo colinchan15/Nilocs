@@ -1,10 +1,12 @@
 class CubesController < ApplicationController
   before_action :set_cube, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   # GET /cubes
   # GET /cubes.json
   def index
-    @cubes = Cube.all
+    # @cubes = Cube.all
+    @cubes = Cube.all.order("created_at desc")
   end
 
   # GET /cubes/1
@@ -14,7 +16,8 @@ class CubesController < ApplicationController
 
   # GET /cubes/new
   def new
-    @cube = Cube.new
+    # @cube = Cube.new
+    @cube = current_user.cubes.build
   end
 
   # GET /cubes/1/edit
@@ -25,6 +28,7 @@ class CubesController < ApplicationController
   # POST /cubes.json
   def create
     @cube = Cube.new(cube_params)
+    # @cube = current_user.cubes.build(cube_params)
 
     respond_to do |format|
       if @cube.save
@@ -69,6 +73,6 @@ class CubesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cube_params
-      params.require(:cube).permit(:brand, :model, :description, :condition, :finish, :title, :price)
+      params.require(:cube).permit(:brand, :model, :description, :condition, :finish, :title, :price, :image)
     end
 end
