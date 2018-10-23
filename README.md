@@ -16,8 +16,8 @@ Niloc's Store is a fictional eCommerce Store that sells Rubik's cubes.
 
 ## Installation Instructions
 
-1. Install dependencies via 'bundle install'
-2. Migrate database 'rails db:migrate'
-3. Seed database 'rails db:seed'
+1. Install dependencies via `bundle install`
+2. Migrate database `rails db:migrate`
+3. Seed database `rails db:seed`
 4. You're all set!
 
