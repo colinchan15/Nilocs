@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Niloc</title>
+    <title>Niloc's Cube Store</title>
     <%= csrf_meta_tags %>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,7 +26,7 @@
      <nav class="navbar is-warning" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <%= link_to root_path, class:"navbar-item" do %>
-          <h1 class="title is-5">Niloc</h1>
+          <h1 class="title is-5">Niloc's Cube Store</h1>
         <% end  %>
       <div class="navbar-burger burger" data-target="navbar">
         <span></span>
@@ -40,24 +40,14 @@
           <div class="navbar-item">
             <div class="field is-grouped">
 
-              <!-- uncomment this afterwards -->
-            <%# if cart_has_items %>
-              <%#= link_to cart_path(@cart), class:"navbar-item button is-warning" do %>
-              <!-- <span class="icon is-small">
-                <i class="fa fa-shopping-cart"></i>
-              </span>
-              <span>Cart
-                <%#= cart_count_over_one %>
-                </span> -->
-              <%# end %>
-            <%# end %>
-
             <% if user_signed_in? %>
               <%= link_to 'Sell', new_cube_path, class: "navbar-item button is-dark" %>
 
+              <!-- drop down menu -->
               <div class="navbar-item has-dropdown is-hoverable">
                 <%= link_to 'Account', edit_user_registration_path, class: "navbar-link" %>
                 <div class="navbar-dropdown is-right">
+                  <%= link_to 'View Cart', cart_path(@cart), class:"navbar-item" %>
                   <%= link_to current_user.name, edit_user_registration_path, class:"navbar-item" %>
                   <%= link_to "Log Out", destroy_user_session_path, method: :delete, class:"navbar-item" %>
                 </div>

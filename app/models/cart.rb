@@ -12,5 +12,9 @@ def add_cube(cube)
 	current_item
 end
 
+# taking anything added to the cart and generating a total price from that
+def total_price
+	line_items.to_a.sum {|item| item.total_price}
+end
 
 end
