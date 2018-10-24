@@ -45,7 +45,6 @@ end
 gem 'bulma-rails', '~> 0.6.1' 
 gem 'simple_form' # generates simpler forms outside typical rails forms
 gem 'devise' # user authentication
-gem 'gravatar_image_tag', '~> 1.2' # 
 gem 'mini_magick' # cw requires this gem 
 gem 'carrierwave', '~> 1.0' # image upload service
 

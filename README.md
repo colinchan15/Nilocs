@@ -1,6 +1,6 @@
 # Niloc's eCommerce Cube Store
 
-Niloc's Store is a fictional eCommerce Store that sells Rubik's cubes. 
+Niloc's Store is a fictional eCommerce Store that sells Rubik's cubes. Deployed on a kubernetes environment (using Docker and Google Kubernetes Engine) which can be accessed [here](http://35.196.209.30:3000)
 
 ## Built Using:
 * Ruby 2.5.1
@@ -10,7 +10,6 @@ Niloc's Store is a fictional eCommerce Store that sells Rubik's cubes.
 * [Bulma Rails](https://github.com/jgthms/bulma)
 * [Simple Form](https://github.com/plataformatec/simple_form)
 * [Devise](https://github.com/plataformatec/devise) 
-* [Gravatar](https://github.com/mdeering/gravatar_image_tag)
 * [Mini Magick](https://github.com/minimagick/minimagick)
 * [CarrierWave](https://github.com/carrierwaveuploader/carrierwave)
 
