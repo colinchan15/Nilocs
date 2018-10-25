@@ -6,6 +6,8 @@ Dockerhub repo for this image can be found [here](https://hub.docker.com/r/colin
 
 ER Diagram for this app can be [here](https://drive.google.com/file/d/1PCxktd3XFryh5aOdfn9VTInOXmhSZZZ-/view?usp=sharing)
 
+The process I took to deploy my app to GKE can be found [here](https://docs.google.com/document/d/1A7EeWRUuFsKUbUKpg2tZu5dd8aPDEJSsvMyyPmQv6MY/edit?usp=sharing)
+
 ## Built Using:
 * Ruby 2.5.1
 * Rails 5.2.1
