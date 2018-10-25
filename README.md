@@ -4,6 +4,8 @@ Niloc's Store is a fictional eCommerce Store that sells Rubik's cubes. Deployed 
 
 Dockerhub repo for this image can be found [here](https://hub.docker.com/r/colinrc827/nilocsstore/).
 
+ER Diagram for this app can be [here](https://drive.google.com/file/d/1PCxktd3XFryh5aOdfn9VTInOXmhSZZZ-/view?usp=sharing)
+
 ## Built Using:
 * Ruby 2.5.1
 * Rails 5.2.1
