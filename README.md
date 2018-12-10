@@ -1,6 +1,6 @@
 # Niloc's eCommerce Cube Store
 
-Niloc's Store is a fictional eCommerce Store that sells Rubik's cubes. Deployed on a kubernetes environment (using Docker and Google Kubernetes Engine).
+Niloc's Store is a fictional eCommerce Store that sells Rubik's cubes. Deployed on a kubernetes environment (using Docker and Google Kubernetes Engine [Currently taken off due to GCP costs :(]).
 
 Dockerhub repo for this image can be found [here](https://hub.docker.com/r/colinrc827/nilocsstore/).
 
